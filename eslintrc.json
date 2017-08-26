@@ -1,0 +1,142 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "impliedStrict": true,
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "standard",
+    "standard-jsx"
+  ],
+  "plugins": [
+    "react-native",
+    "flowtype",
+    "fp"
+  ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+    // ESLINT
+    "max-len": "warn",
+    "max-lines": "warn",
+    "newline-before-return": "error",
+    "require-await": "error",
+    // REACT
+    "react/jsx-filename-extension": "off", // because of react-native
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "ignoreRefs": false,
+        "allowArrowFunctions": false,
+        "allowBind": false
+      }
+    ], // because of performance
+    "react/prop-types": "off", // because of flow
+    "react/no-unused-prop-types": "off", // because of flow
+    // PROMISES
+    // "promise/catch-or-return": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    // "promise/always-return": "error",
+    "promise/no-nesting": "warn",
+    "promise/no-promise-in-callback": "warn",
+    "promise/no-callback-in-promise": "warn",
+    "promise/avoid-new": "warn",
+    "promise/prefer-await-to-then": "error",
+    "promise/prefer-await-to-callbacks": "error",
+    // REACT-NATIVE
+    "react-native/no-unused-styles": "error",
+    "react-native/split-platform-components": "error",
+    "react-native/no-inline-styles": "error",
+    "react-native/no-color-literals": "warn",
+    // FLOWTYPE
+    "flowtype/boolean-style": [
+      "error",
+      "boolean"
+    ],
+    "flowtype/define-flow-type": "error",
+    "flowtype/delimiter-dangle": [
+      "error",
+      "never"
+    ],
+    "flowtype/generic-spacing": [
+      "error",
+      "never"
+    ],
+    "flowtype/no-dupe-keys": "error",
+    "flowtype/no-primitive-constructor-types": "error",
+    "flowtype/no-types-missing-file-annotation": "error",
+    "flowtype/no-weak-types": [
+      "error",
+      {
+        "any": true,
+        "Object": false,
+        "Function": true
+      }
+    ],
+    "flowtype/object-type-delimiter": [
+      "error",
+      "comma"
+    ],
+    "flowtype/require-parameter-type": "error",
+    "flowtype/require-return-type": [
+      "error",
+      "always",
+      {
+        "annotateUndefined": "always"
+      }
+    ],
+    "flowtype/semi": [
+      "error",
+      "never"
+    ],
+    "flowtype/space-after-type-colon": [
+      "error",
+      "always"
+    ],
+    "flowtype/space-before-generic-bracket": [
+      "error",
+      "never"
+    ],
+    "flowtype/space-before-type-colon": [
+      "error",
+      "never"
+    ],
+    "flowtype/union-intersection-spacing": [
+      "error",
+      "always"
+    ],
+    "flowtype/use-flow-type": "error",
+    // FUNCTIONAL PROGRAMMING
+    "no-var": "error",
+    "fp/no-arguments": "error",
+    "fp/no-delete": "error",
+    "fp/no-get-set": "error",
+    "fp/no-let": "warn",
+    "fp/no-loops": "error",
+    "fp/no-mutating-assign": "error",
+    "fp/no-mutating-methods": "error",
+    "fp/no-mutation": [
+      "warn",
+      {
+        "commonjs": false,
+        "allowThis": true,
+        "exceptions": []
+      }
+    ],
+    "fp/no-valueof-field": "error"
+  }
+}
