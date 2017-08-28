@@ -1,7 +1,7 @@
 {
   "name": "@alexanderbast/eslint-config",
-  "version": "1.0.0",
-  "description": "Personal eslint config",
+  "version": "1.1.0",
+  "description": "Personal eslint config. Very strict",
   "main": "index.js",
   "author": {
     "name": "Alexander Bast",
@@ -24,7 +24,9 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-react-native": "^3.0.1",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-react-perf": "^2.0.5",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-unicorn": "^2.1.2"
   },
   "keywords": [
     "eslint",

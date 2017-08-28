@@ -14,71 +14,55 @@
     "es6": true
   },
   "extends": [
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:flowtype/recommended",
+    "plugin:react-perf/recommended",
+    "plugin:react-native/all",
     "airbnb",
     "standard",
     "standard-jsx"
   ],
   "plugins": [
-    "react-native",
+    "unicorn",
     "flowtype",
     "fp"
   ],
-  "settings": {
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": true
-    }
-  },
   "rules": {
     // ESLINT
     "max-len": "warn",
     "max-lines": "warn",
     "newline-before-return": "error",
     "require-await": "error",
-    // REACT
-    "react/jsx-filename-extension": "off", // because of react-native
-    "react/jsx-no-bind": [
-      "error",
+    // FUNCTIONAL PROGRAMMING
+    "no-var": "error",
+    "fp/no-arguments": "error",
+    "fp/no-delete": "error",
+    "fp/no-get-set": "error",
+    "fp/no-let": "warn",
+    "fp/no-loops": "error",
+    "fp/no-mutating-assign": "error",
+    "fp/no-mutating-methods": "error",
+    "fp/no-mutation": [
+      "warn",
       {
-        "ignoreRefs": false,
-        "allowArrowFunctions": false,
-        "allowBind": false
+        "commonjs": false,
+        "allowThis": true,
+        "exceptions": []
       }
-    ], // because of performance
-    "react/prop-types": "off", // because of flow
-    "react/no-unused-prop-types": "off", // because of flow
+    ],
+    "fp/no-valueof-field": "error",
     // PROMISES
-    // "promise/catch-or-return": "error",
-    "promise/no-return-wrap": "error",
-    "promise/param-names": "error",
-    // "promise/always-return": "error",
-    "promise/no-nesting": "warn",
-    "promise/no-promise-in-callback": "warn",
-    "promise/no-callback-in-promise": "warn",
-    "promise/avoid-new": "warn",
     "promise/prefer-await-to-then": "error",
     "promise/prefer-await-to-callbacks": "error",
-    // REACT-NATIVE
-    "react-native/no-unused-styles": "error",
-    "react-native/split-platform-components": "error",
-    "react-native/no-inline-styles": "error",
-    "react-native/no-color-literals": "warn",
     // FLOWTYPE
-    "flowtype/boolean-style": [
-      "error",
-      "boolean"
-    ],
     "flowtype/define-flow-type": "error",
     "flowtype/delimiter-dangle": [
       "error",
       "never"
     ],
-    "flowtype/generic-spacing": [
-      "error",
-      "never"
-    ],
     "flowtype/no-dupe-keys": "error",
     "flowtype/no-primitive-constructor-types": "error",
-    "flowtype/no-types-missing-file-annotation": "error",
     "flowtype/no-weak-types": [
       "error",
       {
@@ -103,40 +87,17 @@
       "error",
       "never"
     ],
-    "flowtype/space-after-type-colon": [
+    // REACT
+    "react/jsx-filename-extension": "off", // because of react-native
+    "react/jsx-no-bind": [
       "error",
-      "always"
-    ],
-    "flowtype/space-before-generic-bracket": [
-      "error",
-      "never"
-    ],
-    "flowtype/space-before-type-colon": [
-      "error",
-      "never"
-    ],
-    "flowtype/union-intersection-spacing": [
-      "error",
-      "always"
-    ],
-    "flowtype/use-flow-type": "error",
-    // FUNCTIONAL PROGRAMMING
-    "no-var": "error",
-    "fp/no-arguments": "error",
-    "fp/no-delete": "error",
-    "fp/no-get-set": "error",
-    "fp/no-let": "warn",
-    "fp/no-loops": "error",
-    "fp/no-mutating-assign": "error",
-    "fp/no-mutating-methods": "error",
-    "fp/no-mutation": [
-      "warn",
       {
-        "commonjs": false,
-        "allowThis": true,
-        "exceptions": []
+        "ignoreRefs": false,
+        "allowArrowFunctions": false,
+        "allowBind": false
       }
-    ],
-    "fp/no-valueof-field": "error"
+    ], // because of performance (bug, should report)
+    "react/no-unused-prop-types": "off", // because of flow
+    "react/prop-types": "off" // because of flow
   }
 }
