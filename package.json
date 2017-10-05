@@ -1,6 +1,6 @@
 {
   "name": "@alexanderbast/eslint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Personal eslint config. Very strict",
   "main": "index.js",
   "author": {
@@ -14,17 +14,18 @@
   "peerDependencies": {
     "eslint": ">= 3",
     "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-jsx": "^4.0.2",
-    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-flowtype": "^2.37.0",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-jest": "^21.2.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.3.0",
-    "eslint-plugin-react-native": "^3.0.1",
+    "eslint-plugin-react-native": "^3.1.0",
     "eslint-plugin-react-perf": "^2.0.5",
+    "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-unicorn": "^2.1.2"
   },
@@ -36,7 +37,7 @@
   "homepage": "https://github.com/alexanderbast/eslint-config#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexanderbast/eslint-config.git"
+    "url": "https://github.com/alexanderbast/eslint-config"
   },
   "bugs": {
     "url": "https://github.com/alexanderbast/eslint-config/issues"

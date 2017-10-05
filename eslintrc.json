@@ -11,7 +11,8 @@
   },
   "parser": "babel-eslint",
   "env": {
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "extends": [
     "plugin:promise/recommended",
@@ -19,6 +20,7 @@
     "plugin:flowtype/recommended",
     "plugin:react-perf/recommended",
     "plugin:react-native/all",
+    "plugin:jest/recommended",
     "airbnb",
     "standard",
     "standard-jsx"
@@ -26,7 +28,8 @@
   "plugins": [
     "unicorn",
     "flowtype",
-    "fp"
+    "fp",
+    "jest"
   ],
   "rules": {
     // ESLINT
@@ -88,7 +91,15 @@
       "never"
     ],
     // REACT
-    "react/jsx-filename-extension": "off", // because of react-native
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ], // because of react-native
     "react/jsx-no-bind": [
       "error",
       {
@@ -96,8 +107,6 @@
         "allowArrowFunctions": false,
         "allowBind": false
       }
-    ], // because of performance (bug, should report)
-    "react/no-unused-prop-types": "off", // because of flow
-    "react/prop-types": "off" // because of flow
+    ] // because of performance (bug, should report)
   }
 }
