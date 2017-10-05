@@ -4,7 +4,13 @@
 
 ## Install
 
-Run `npm install --save-dev @alexanderbast/eslint-config eslint eslint-config-airbnb eslint-config-standard eslint-config-standard-jsx eslint-plugin-flowtype eslint-plugin-fp eslint-plugin-import eslint-plugin-jsx-a11y@^5.1.1 eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-react-native eslint-plugin-react-perf eslint-plugin-standard eslint-plugin-unicorn`
+### Using npm
+
+Run `npm install --save-dev @alexanderbast/eslint-config eslint eslint-config-airbnb eslint-config-standard-jsx eslint-config-standard eslint-plugin-flowtype eslint-plugin-fp eslint-plugin-import eslint-plugin-jest eslint-plugin-jsx-a11y@5.1.1 eslint-plugin-node eslint-plugin-promise eslint-plugin-react-native eslint-plugin-react-perf eslint-plugin-react eslint-plugin-standard eslint-plugin-unicorn`
+
+### Using yarn
+
+Run `yarn add --dev @alexanderbast/eslint-config eslint eslint-config-airbnb eslint-config-standard-jsx eslint-config-standard eslint-plugin-flowtype eslint-plugin-fp eslint-plugin-import eslint-plugin-jest eslint-plugin-jsx-a11y@5.1.1 eslint-plugin-node eslint-plugin-promise eslint-plugin-react-native eslint-plugin-react-perf eslint-plugin-react eslint-plugin-standard eslint-plugin-unicorn`
 
 ## Use
 
